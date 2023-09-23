@@ -9,9 +9,7 @@ function print(text) {
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
  */
-function isValid(name) {
-  // ваш код...
-}
+const isValid = name => Boolean(name) && name.length >= 4 && !(/\s/g.test(name));
 
 function sayHello() {
   let userName = prompt('Введите ваше имя');
