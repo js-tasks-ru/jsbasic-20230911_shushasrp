@@ -1,3 +1,16 @@
 function camelize(str) {
-  // ваш код...
+  let result = [];
+  let savedItem = '';
+
+  result = str.split('').map((item) => {
+    if (savedItem === '-') {
+      savedItem = item;
+      return item.toUpperCase();
+    }
+    savedItem = item;
+
+    return item === '-' ? null : item;
+  });
+
+  return result.join('');
 }
